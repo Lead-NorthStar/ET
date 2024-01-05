@@ -47,6 +47,8 @@ namespace ET
                 //modelPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "Unity.Model.pdb.bytes"));
                 //modelViewAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "Unity.ModelView.dll.bytes"));
                 //modelViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "Unity.ModelView.pdb.bytes"));
+                this.modelAssembly = Assembly.Load(modelAssBytes, modelPdbBytes);
+                this.modelViewAssembly = Assembly.Load(modelViewAssBytes, modelViewPdbBytes);
 
                 if (Define.EnableIL2CPP)
                 {
